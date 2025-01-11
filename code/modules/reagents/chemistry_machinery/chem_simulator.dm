@@ -265,6 +265,7 @@
 					to_chat(usr, SPAN_WARNING("The [src] makes a suspicious wail."))
 					return
 		if("select_reference_property")
+			update_costs()
 			if(!reference)
 				return
 			for(var/datum/chem_property/reference_prop in reference.data.properties)
@@ -273,7 +274,6 @@
 				reference_property = reference_prop
 			if(!reference_property)
 				to_chat(usr, SPAN_WARNING("The [src] makes a suspicious wail."))
-			update_costs()
 				return
 		if("simulate")
 			if(!ready)
