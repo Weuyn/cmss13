@@ -705,27 +705,21 @@
 	var/duration_per_level = 0
 
 /datum/chem_property/positive/fire/reset_reagent()
+	holder.chemfiresupp = initial(holder.chemfiresupp)
 	holder.radiusmod = initial(holder.radiusmod)
 	holder.durationmod = initial(holder.durationmod)
 	holder.intensitymod = initial(holder.intensitymod)
-
 	holder.rangefire = initial(holder.rangefire)
 	holder.durationfire = initial(holder.durationfire)
 	holder.intensityfire = initial(holder.intensityfire)
-
 	..()
 
 /datum/chem_property/positive/fire/update_reagent()
+	holder.chemfiresupp = TRUE
+
 	holder.radiusmod += radiusmod_per_level * level
 	holder.durationmod += durationmod_per_level * level
 	holder.intensitymod += intensitymod_per_level * level
-
-	holder.rangefire += range_per_level * level
-	holder.durationfire += duration_per_level * level
-	holder.intensityfire += intensity_per_level * level
-
-	..()
-
 /datum/chem_property/positive/fire/post_update_reagent()
 	holder.rangefire = max(holder.rangefire, 1)
 	holder.durationfire = max(holder.durationfire, 1)
@@ -773,14 +767,6 @@
 	intensitymod_per_level = 0.2
 	durationmod_per_level = -0.1
 	radiusmod_per_level = -0.01
-
-/datum/chem_propert/positive/fire/oxidizing/reset_reagent()
-	holder.chemfiresupp = initial(holder.chemfiresupp)
-	..()
-
-/datum/chem_property/positive/fire/oxidizing/update_reagent()
-	holder.chemfiresupp = TRUE
-	..()
 
 /datum/chem_property/positive/fire/oxidizing/reaction_mob(mob/M, method = TOUCH, volume, potency = 1)
 	var/mob/living/L = M
