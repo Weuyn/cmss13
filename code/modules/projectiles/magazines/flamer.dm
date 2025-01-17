@@ -261,8 +261,8 @@
 	matter = list("metal" = 50) // no free metal
 	flamer_chem = null
 	max_rounds = 200
-	max_range = 7
-	fuel_pressure = 1
+	max_range = 5
+	fuel_pressure = 2
 	max_duration = 50
 	max_intensity = 60
 	custom = TRUE
