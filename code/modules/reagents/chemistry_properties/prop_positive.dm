@@ -795,6 +795,8 @@
 	rarity = PROPERTY_COMMON
 	value = 1
 	range_per_level = 1
+	intensity_per_level = -1
+	duration_per_level = -1
 
 	intensitymod_per_level = -0.05
 	radiusmod_per_level = 0.05
