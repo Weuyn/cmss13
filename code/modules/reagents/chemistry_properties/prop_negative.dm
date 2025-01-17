@@ -498,14 +498,14 @@
 		return
 	..()
 	var/mob/living/carbon/C = M
-	C.blood_volume = max(C.blood_volume - POTENCY_MULTIPLIER_VHIGH * potency, 0)
+	C.blood_volume = max(C.blood_volume - POTENCY_MULTIPLIER_HIGH * potency, 0)
 	holder.volume++
 
 /datum/chem_property/negative/hemositic/process_overdose(mob/living/M, potency = 1, delta_time)
 	if(!iscarbon(M))
 		return
 	var/mob/living/carbon/C = M
-	C.blood_volume = max(C.blood_volume-10*potency,0)
+	C.blood_volume = max(C.blood_volume - POTENCY_MULTIPLIER_VHIGH, 0)
 	holder.volume += potency * POTENCY_MULTIPLIER_MEDIUM
 
 /datum/chem_property/negative/hemositic/process_critical(mob/living/M, potency = 1, delta_time)
