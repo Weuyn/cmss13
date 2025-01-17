@@ -558,7 +558,7 @@
 					status_bar = "CLEARANCE INSUFFICIENT FOR AMPLIFICATION"
 					return FALSE
 				if(target_property.level >= target_property.max_level)
-					status_bar = "MAXIMUM PROPERTY LEVEL REACHED"
+					status_bar = "MAXIMUM AMPLIFICATION LEVEL REACHED"
 					return FALSE
 		else
 			status_bar = "TARGET NOT SELECTED"
