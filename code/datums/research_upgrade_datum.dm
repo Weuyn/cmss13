@@ -138,7 +138,7 @@
 	value_upgrade = 2000 
 	clearance_req = 4
 	change_purchase = -200
-	mainimum_price = 1000
+	minimum_price = 1000
 	behavior = RESEARCH_UPGRADE_ITEM
 	upgrade_type = ITEM_ACCESSORY_UPGRADE
 	item_reference = /obj/item/ammo_magazine/flamer_tank/custom/upgraded
@@ -149,7 +149,7 @@
 	value_upgrade = 500 //not useful enough to be expensive
 	clearance_req = 2
 	change_purchase = -50
-	mainimum_price = 200
+	minimum_price = 200
 	item_reference = /obj/item/ammo_magazine/flamer_tank/smoke/upgraded
 
 /datum/research_upgrades/armor
