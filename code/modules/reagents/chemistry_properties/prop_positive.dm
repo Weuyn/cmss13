@@ -28,7 +28,7 @@
 	rarity = PROPERTY_COMMON
 	starter = TRUE
 	value = 1
-	cost_penalty = FALSE
+
 
 /datum/chem_property/positive/anticorrosive/process(mob/living/M, potency = 1)
 	M.heal_limb_damage(0, potency)
@@ -48,7 +48,6 @@
 	rarity = PROPERTY_COMMON
 	starter = TRUE
 	value = 1
-	cost_penalty = FALSE
 
 /datum/chem_property/positive/neogenetic/process(mob/living/M, potency = 1)
 	M.heal_limb_damage(potency, 0)
@@ -227,6 +226,7 @@
 	rarity = PROPERTY_COMMON
 	category = PROPERTY_TYPE_STIMULANT
 	value = 1
+	cost_penalty = FALSE
 
 /datum/chem_property/positive/painkilling/on_delete(mob/living/M)
 	..()
@@ -531,10 +531,11 @@
 /datum/chem_property/positive/electrogenetic
 	name = PROPERTY_ELECTROGENETIC
 	code = "EGN"
-	description = "Stimulates cardiac muscles when exposed to electric shock and provides general healing. Useful in restarting the heart in combination with a defibrillator. Can not be ingested."
+	description = "Stimulates cardiac muscles when exposed to electric shock and provides general healing. Useful in restarting the heart in combination with a defibrillator."
 	rarity = PROPERTY_COMMON
 	category = PROPERTY_TYPE_REACTANT
 	value = 1
+	cost_penalty = FALSE
 
 /datum/chem_property/positive/electrogenetic/trigger(A)
 	if(isliving(A))
