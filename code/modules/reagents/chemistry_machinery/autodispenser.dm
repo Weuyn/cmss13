@@ -261,6 +261,9 @@
 			. = TRUE
 
 		if("toggleoutput")
+			if(status == AUTODISPENSER_RUNNING)
+				to_chat(user, SPAN_WARNING("You can't switch outputs while \the [src] is running."))
+				return
 			switch(outputmode)
 				if(OUTPUT_TO_CONTAINER)
 					if(linked_storage)
@@ -276,7 +279,8 @@
 				if(OUTPUT_TO_CENTRIFUGE)
 					flush_buffer()
 					outputmode = OUTPUT_TO_CONTAINER
-			. = TRUE
+				. = TRUE
+
 
 /obj/structure/machinery/autodispenser/process()
 	if(inoperable())
